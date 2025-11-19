@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const mainFont = 'Heebo, Arial, sans-serif';
 
-const sectionTitle: React.CSSProperties = {
+const sectionTitle = {
   fontFamily: mainFont,
   fontWeight: 700,
   fontSize: '2.15rem',
@@ -14,7 +14,7 @@ const sectionTitle: React.CSSProperties = {
   position: 'relative',
   animation: 'fadeInUp 1.08s cubic-bezier(.44,.12,.54,1.12)'
 };
-const subtitleYellow: React.CSSProperties = {
+const subtitleYellow = {
   fontFamily: mainFont,
   fontWeight: 600,
   fontSize: '1.19rem',
@@ -24,7 +24,7 @@ const subtitleYellow: React.CSSProperties = {
   position: 'relative',
   animation: 'fadeInUp 1.21s cubic-bezier(.44,.12,.54,1.22)'
 };
-const subtitleWhite: React.CSSProperties = {
+const subtitleWhite = {
   fontFamily: mainFont,
   fontWeight: 600,
   fontSize: '1.18rem',
@@ -34,7 +34,7 @@ const subtitleWhite: React.CSSProperties = {
   position: 'relative',
   animation: 'fadeInUp 1.24s cubic-bezier(.41,.13,.57,1.13)'
 };
-const contentText: React.CSSProperties = {
+const contentText = {
   fontFamily: mainFont,
   fontWeight: 400,
   fontSize: '1.09rem',
@@ -45,7 +45,7 @@ const contentText: React.CSSProperties = {
   maxWidth: 700,
   margin: '0 auto'
 };
-const glassBtnBase: React.CSSProperties = {
+const glassBtnBase = {
   minWidth: 232,
   minHeight: 52,
   fontFamily: mainFont,
@@ -67,19 +67,19 @@ const glassBtnBase: React.CSSProperties = {
   transition: 'box-shadow 0.19s, background 0.22s, color 0.10s, transform 0.18s',
   gap: 10
 };
-const glassBtnGold: React.CSSProperties = {
+const glassBtnGold = {
   ...glassBtnBase,
   background: 'linear-gradient(97deg, #ffe47a 72%, #fff6d6 118%)',
   color: '#232323',
   border: 'none',
 };
-const glassBtnPurple: React.CSSProperties = {
+const glassBtnPurple = {
   ...glassBtnBase,
   background: 'linear-gradient(96deg, #794aec 76%, #b5a0ff 120%)',
   color: '#fff',
   border: 'none',
 };
-const navLink: React.CSSProperties = {
+const navLink = {
   margin: '0',
   textDecoration: 'none',
   color: '#fff',
@@ -92,7 +92,7 @@ const navLink: React.CSSProperties = {
   border: 'none',
   cursor: 'pointer'
 };
-const glassGridImg: React.CSSProperties = {
+const glassGridImg = {
   borderRadius: 16,
   objectFit: 'cover',
   width: '100%',
@@ -103,7 +103,7 @@ const glassGridImg: React.CSSProperties = {
   display: 'block',
   animation: 'fadeInUpImg 1.22s cubic-bezier(.48,.12,.45,1.15)'
 };
-const glassCardSection: React.CSSProperties = {
+const glassCardSection = {
   background: 'rgba(26,28,42,0.77)',
   borderRadius: 28,
   maxWidth: 1100,
@@ -118,7 +118,7 @@ export default function Home() {
   return (
     <div dir="rtl" style={{ fontFamily: mainFont, background: '#0F1626', color: '#fff', minHeight: '100vh', margin: 0 }}>
       <header style={{
-        position: 'fixed' as React.CSSProperties['position'], top: 0, right: 0, left: 0, zIndex: 10,
+        position: 'fixed', top: 0, right: 0, left: 0, zIndex: 10,
         background: 'rgba(26,30,46,0.96)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #192340'
       }}>
         <nav style={{
@@ -141,27 +141,27 @@ export default function Home() {
         background: 'linear-gradient(180deg, #0F1626 70%, #191b22 100%)'
       }}>
         <div style={{
-          position: 'absolute' as React.CSSProperties['position'], zIndex: 1, top: 0, right: 0,
+          position: 'absolute', zIndex: 1, top: 0, right: 0,
           width: '100%', height: '98vh', overflow: 'hidden'
         }}>
           <Image src="/ראשונה.JPG" alt="אירוע Apollo" layout="fill" objectFit="cover"
             style={{ opacity: 0.71, filter: 'brightness(0.7) blur(0px)', transition: 'opacity 0.68s' }} priority />
           <div style={{
-            position: 'absolute' as React.CSSProperties['position'], inset: 0,
+            position: 'absolute', inset: 0,
             background: 'linear-gradient(180deg, rgba(15,22,38,0.10) 12%, rgba(15,22,38,0.89) 95%)'
           }} />
         </div>
         <div style={{
-          position: 'relative' as React.CSSProperties['position'], zIndex: 3, textAlign: 'center',
+          position: 'relative', zIndex: 3, textAlign: 'center',
           marginTop: 135, animation: 'fadeInUp 1.2s cubic-bezier(.36,.10,.56,1.15)'
         }}>
           <h1 style={{
             fontFamily: mainFont, fontWeight: 700, fontSize: '3.2rem', color: '#fff', letterSpacing: '-2px', marginBottom: 2,
-            position: 'relative' as React.CSSProperties['position'], display: 'inline-block'
+            position: 'relative', display: 'inline-block'
           }}>
-            <span id="main-title" style={{ position: 'relative' as React.CSSProperties['position'] }}>Apollo Security | אפולו אבטחה</span>
+            <span id="main-title" style={{ position: 'relative' }}>Apollo Security | אפולו אבטחה</span>
             <span className="headline-underline" style={{
-                position: 'absolute' as React.CSSProperties['position'], left: 0, right: 0, bottom: -7, height: 4, width: '100%', margin: 'auto',
+                position: 'absolute', left: 0, right: 0, bottom: -7, height: 4, width: '100%', margin: 'auto',
                 background: 'linear-gradient(88deg, #ffe47a 85%, #ffffff87 100%)', borderRadius: '3px', opacity: 1,
                 animation: 'underlineFadeStatic 2.1s 0.3s cubic-bezier(.37,.23,.39,1.19) forwards'
               }} />
@@ -173,7 +173,7 @@ export default function Home() {
             הסטנדרט הגבוה ביותר לביטחון וסדר באירועים
           </h2>
         </div>
-        <a href="#about" style={{ position:'absolute' as React.CSSProperties['position'], left:0, right:0, margin:'auto', bottom:44, zIndex:12, width:55, height:55, display:'flex', justifyContent:'center', alignItems:'center', cursor:'pointer', animation:'fadeInUp 1.8s cubic-bezier(.46,.08,.54,1.19)' }}>
+        <a href="#about" style={{ position:'absolute', left:0, right:0, margin:'auto', bottom:44, zIndex:12, width:55, height:55, display:'flex', justifyContent:'center', alignItems:'center', cursor:'pointer', animation:'fadeInUp 1.8s cubic-bezier(.46,.08,.54,1.19)' }}>
           <svg width="38" height="38" viewBox="0 0 38 38" style={{display:'block'}}>
             <path d="M4 16 L19 33 L34 16" stroke="#ffe47a" strokeWidth="4.3" fill="none" strokeLinecap="round"
                   style={{ animation: 'arrowBounce 1.7s infinite alternate, fadeInUp 2.1s', opacity:0.93 }}/>
@@ -208,7 +208,7 @@ export default function Home() {
         <h2 style={sectionTitle}>
           אודות | Apollo
           <span style={{
-            position: 'absolute' as React.CSSProperties['position'], left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
+            position: 'absolute', left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
             margin: 'auto', background: 'linear-gradient(88deg, #ffe47a 85%, #ffffff99 100%)',
             borderRadius: '3px', opacity: 1
           }} />
@@ -239,14 +239,14 @@ export default function Home() {
 
       {/* לקוחות חדשים */}
       <section id="clients" style={{ ...glassCardSection, display:'flex', flexDirection:'row-reverse', alignItems:'center', gap:0 }}>
-        <div style={{ flex: 1, minWidth: 0, position: 'relative' as React.CSSProperties['position'], padding:0 }}>
+        <div style={{ flex: 1, minWidth: 0, position: 'relative', padding:0 }}>
           <Image src="/IMG_5096.JPG" alt="לקוחות" width={480} height={320} style={glassGridImg} priority />
         </div>
         <div style={{ flex: 1, minWidth: 0, padding: '38px 38px 29px 28px' }}>
           <h2 style={sectionTitle}>
             לקוחות חדשים
             <span style={{
-              position: 'absolute' as React.CSSProperties['position'], left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
+              position: 'absolute', left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
               margin: 'auto', background: 'linear-gradient(88deg, #ffe47a 85%, #ffffff99 100%)',
               borderRadius: '3px', opacity:1
             }} />
@@ -269,14 +269,14 @@ export default function Home() {
 
       {/* הצטרפות לצוות */}
       <section id="team" style={{ ...glassCardSection, background:'rgba(38,34,70,0.96)', display:'flex', flexDirection:'row-reverse', alignItems:'center', gap:0 }}>
-        <div style={{ flex: 1, minWidth: 0, position: 'relative' as React.CSSProperties['position'], padding:0 }}>
+        <div style={{ flex: 1, minWidth: 0, position: 'relative', padding:0 }}>
           <Image src="/IMG_5381.JPG" alt="עובדים" width={480} height={320} style={glassGridImg} priority />
         </div>
         <div style={{ flex: 1, minWidth: 0, padding: '38px 38px 29px 28px'}}>
           <h2 style={sectionTitle}>
             הצטרפו לצוות Apollo
             <span style={{
-              position: 'absolute' as React.CSSProperties['position'], left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
+              position: 'absolute', left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
               margin: 'auto', background: 'linear-gradient(88deg, #ffe47a 85%, #ffffff99 100%)',
               borderRadius: '3px', opacity:1
             }} />
@@ -305,7 +305,7 @@ export default function Home() {
         <h2 style={{ ...sectionTitle, textAlign: 'center' }}>
           גלריה מהשטח
           <span style={{
-            position: 'absolute' as React.CSSProperties['position'], left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
+            position: 'absolute', left: '35%', right: '35%', bottom: -8, height: 4, width: '30%',
             margin: 'auto', background: 'linear-gradient(88deg, #ffe47a 85%, #ffffff99 100%)',
             borderRadius: '3px', opacity: 1
           }} />
@@ -356,145 +356,31 @@ export default function Home() {
         </div>
       </section>
       <style>{`
-  @media (max-width: 700px) {
-    header nav {
-      flex-direction: column-reverse !important;
-      padding: 16px 12px !important;
-      gap: 10px !important;
-      font-size: 1rem !important;
-    }
-    section, .glass-card-section {
-      padding: 17px 7px 17px 7px !important;
-      max-width: 99vw !important;
-    }
-    h1, h2, h3 {
-      font-size: 1.3rem !important;
-    }
-    img, .next-image {
-      max-width: 100vw !important;
-      height: auto !important;
-    }
-  }
-`}</style>
-<style>{`
-  @media (max-width: 700px) {
-    header {
-      padding: 0;
-      background: rgba(26,30,46,0.98);
-      position: static !important;
-      border-bottom: none !important;
-      box-shadow: none !important;
-    }
-    nav {
-      flex-direction: column !important;
-      justify-content: flex-start !important;
-      align-items: center !important;
-      padding: 10px 0 0 0 !important;
-      gap: 0 !important;
-    }
-    nav a {
-      display: block !important;
-      margin: 9px 0 !important;
-      padding: 7px 0 !important;
-      font-size: 1.15rem !important;
-      font-weight: 600 !important;
-    }
-    nav img, .next-image {
-      width: 44px !important;
-      min-width: 40px !important;
-      height: 44px !important;
-      margin-bottom: 9px !important;
-      border-radius: 50% !important;
-      background: #192340 !important;
-    }
-    .headline-underline, .main-title {
-      font-size: 1.43rem !important;
-      padding: 5px !important;
-    }
-    section, .glass-card-section {
-      padding: 13px 7px 11px 7px !important;
-      max-width: 99vw !important;
-    }
-    h1, h2, h3 {
-      font-size: 1.16rem !important;
-    }
-  }
-`}</style>
-<style>{`
-  @media (max-width: 700px) {
-    header {
-      position: fixed !important;
-      width: 100vw !important;
-      top: 0 !important;
-      z-index: 98 !important;
-      background: rgba(26,30,46,0.99) !important;
-      box-shadow: 0 2px 6px #0008;
-      border-radius: 0 0 18px 18px;
-    }
-    nav {
-      display: flex !important;
-      flex-direction: row !important;
-      padding: 6px 0 4px 0 !important;
-      justify-content: center !important;
-      align-items: center !important;
-      gap: 7px !important;
-      overflow-x: auto !important;
-    }
-    nav a {
-      flex-shrink: 0;
-      padding: 4px 12px !important;
-      font-size: 1rem !important;
-      font-weight: 700;
-      border-radius: 17px;
-      margin: 0 1px !important;
-      background: rgba(34,38,62,0.28);
-      color: #ffe47a !important;
-      text-align: center;
-    }
-    nav img, .next-image {
-      width: 36px !important;
-      height: 36px !important;
-      min-width: 36px !important;
-      border-radius: 50% !important;
-      margin-right: 4px !important;
-    }
-    .headline-underline {
-      display: none !important;
-    }
-    section, .glass-card-section {
-      padding: 10px 4vw 10px 4vw !important;
-      max-width: 100vw !important;
-    }
-    h1, h2 {
-      font-size: 1.20rem !important;
-    }
-    h3 {
-      font-size: 1.08rem !important;
-    }
-    img, .next-image {
-      max-width: 98vw !important;
-      height: auto !important;
-    }
-    body, html, #__next, div {
-      overflow-x: hidden !important;
-      box-sizing: border-box;
-    }
-  }
-`}</style>
-    <style>{`
-  @media (max-width: 700px) {
-    html, body, #__next {
-      min-width: 1200px !important;
-      overflow-x: auto !important;
-      font-size: 1.04rem !important;
-    }
-    header, nav, section, .glass-card-section, div {
-      min-width: 1180px !important;
-      max-width: 1250px !important;
-      overflow-x: auto !important;
-    }
-  }
-`}</style> 
-</div>
+        @media (max-width: 700px) {
+          header, nav, section, .glass-card-section, div {
+            min-width: unset !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            padding: 10px 5vw !important;
+          }
+          h1, h2, h3 {
+            font-size: 1.03rem !important;
+          }
+          img, .next-image {
+            max-width: 98vw !important;
+            height: auto !important;
+            border-radius: 14px !important;
+          }
+          .headline-underline {
+            display: none !important;
+          }
+          html, body, #__next {
+            min-width: unset !important;
+            overflow-x: hidden !important;
+            box-sizing: border-box;
+          }
+        }
+      `}</style>
+    </div>
   );
 }
