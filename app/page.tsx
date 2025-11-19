@@ -355,6 +355,27 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <style>{`
+  @media (max-width: 700px) {
+    header nav {
+      flex-direction: column-reverse !important;
+      padding: 16px 12px !important;
+      gap: 10px !important;
+      font-size: 1rem !important;
+    }
+    section, .glass-card-section {
+      padding: 17px 7px 17px 7px !important;
+      max-width: 99vw !important;
+    }
+    h1, h2, h3 {
+      font-size: 1.3rem !important;
+    }
+    img, .next-image {
+      max-width: 100vw !important;
+      height: auto !important;
+    }
+  }
+`}</style>
     </div>
   );
 }
