@@ -376,6 +376,50 @@ export default function Home() {
     }
   }
 `}</style>
+<style>{`
+  @media (max-width: 700px) {
+    header {
+      padding: 0;
+      background: rgba(26,30,46,0.98);
+      position: static !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+    nav {
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      padding: 10px 0 0 0 !important;
+      gap: 0 !important;
+    }
+    nav a {
+      display: block !important;
+      margin: 9px 0 !important;
+      padding: 7px 0 !important;
+      font-size: 1.15rem !important;
+      font-weight: 600 !important;
+    }
+    nav img, .next-image {
+      width: 44px !important;
+      min-width: 40px !important;
+      height: 44px !important;
+      margin-bottom: 9px !important;
+      border-radius: 50% !important;
+      background: #192340 !important;
+    }
+    .headline-underline, .main-title {
+      font-size: 1.43rem !important;
+      padding: 5px !important;
+    }
+    section, .glass-card-section {
+      padding: 13px 7px 11px 7px !important;
+      max-width: 99vw !important;
+    }
+    h1, h2, h3 {
+      font-size: 1.16rem !important;
+    }
+  }
+`}</style>
     </div>
   );
 }
