@@ -420,6 +420,67 @@ export default function Home() {
     }
   }
 `}</style>
+<style>{`
+  @media (max-width: 700px) {
+    header {
+      position: fixed !important;
+      width: 100vw !important;
+      top: 0 !important;
+      z-index: 98 !important;
+      background: rgba(26,30,46,0.99) !important;
+      box-shadow: 0 2px 6px #0008;
+      border-radius: 0 0 18px 18px;
+    }
+    nav {
+      display: flex !important;
+      flex-direction: row !important;
+      padding: 6px 0 4px 0 !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 7px !important;
+      overflow-x: auto !important;
+    }
+    nav a {
+      flex-shrink: 0;
+      padding: 4px 12px !important;
+      font-size: 1rem !important;
+      font-weight: 700;
+      border-radius: 17px;
+      margin: 0 1px !important;
+      background: rgba(34,38,62,0.28);
+      color: #ffe47a !important;
+      text-align: center;
+    }
+    nav img, .next-image {
+      width: 36px !important;
+      height: 36px !important;
+      min-width: 36px !important;
+      border-radius: 50% !important;
+      margin-right: 4px !important;
+    }
+    .headline-underline {
+      display: none !important;
+    }
+    section, .glass-card-section {
+      padding: 10px 4vw 10px 4vw !important;
+      max-width: 100vw !important;
+    }
+    h1, h2 {
+      font-size: 1.20rem !important;
+    }
+    h3 {
+      font-size: 1.08rem !important;
+    }
+    img, .next-image {
+      max-width: 98vw !important;
+      height: auto !important;
+    }
+    body, html, #__next, div {
+      overflow-x: hidden !important;
+      box-sizing: border-box;
+    }
+  }
+`}</style>
     </div>
   );
 }
