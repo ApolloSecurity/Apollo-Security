@@ -481,6 +481,20 @@ export default function Home() {
     }
   }
 `}</style>
-    </div>
+    <style>{`
+  @media (max-width: 700px) {
+    html, body, #__next {
+      min-width: 1200px !important;
+      overflow-x: auto !important;
+      font-size: 1.04rem !important;
+    }
+    header, nav, section, .glass-card-section, div {
+      min-width: 1180px !important;
+      max-width: 1250px !important;
+      overflow-x: auto !important;
+    }
+  }
+`}</style> 
+</div>
   );
 }
